@@ -1,23 +1,31 @@
 body {
-    padding: 3%;
+    padding: 50px;
     text-align: center;
     background-color: white;
+    max-width: 700px;
+    width: 80%;
+    margin: auto;
 }
+
 h1 {
     font-size: 30px;
     color: grey;
 }
+
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 50%;
     margin: 3px auto;
     padding: 2%;
     border: 3px solid black;
     background-color: white;
     border-radius: 10px;
+    box-sizing: border-box;
+    flex-direction: row;
+    margin: auto;
 }
+
 #reset-all-btn {
     align-items: center;
     justify-content: center;
@@ -31,25 +39,33 @@ h1 {
     width: 30%;
     height: 5%;
 }
+
 .container-home, .container-guest {
     display: inline-block;
     border: 3px solid grey;
     background-color: white;
+    border-radius: 10px;
     margin: 3%;
     padding: 1%;
     font-size: 50px;
-    height: 80%;
-    width: 60%;
+    flex: 50%;
 }
 
 #home-score, #guest-score {
     border: 3px solid black;
-    max-width: 50%;
+    width: 60%;
     margin: 50% auto 50%;
     padding: 2%;
     color: white;
     background-color: black;
-    font-size: 90px;
+    font-size: 80px;
+}
+
+.home-score-box, .guest-score-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 50%;
 }
 
 #home-score-btn-1, #home-score-btn-2, #home-score-btn-3, #guest-score-btn-1, #guest-score-btn-2, #guest-score-btn-3 {
@@ -58,49 +74,44 @@ h1 {
     border: 1px solid black;
     margin: 0 3% 10%;  
     font-size: 30px; 
+    min-width: 28%;
+    align-items: center;
+    justify-content: center;
 }
 
 #home-score-btn-reset, #guest-score-btn-reset {
     color: red;
     background-color: white;
-    border: 1px solid red;
-    margin: 0 3% 10%;  
+    border: 3px solid red;
+    margin: 0 3% 10%; 
+    padding: 8px; 
     font-size: 20px; 
+    width: 60%;
+}
+#reset-all-btn {
+    height: auto;
+    color: blue;
+    border: 3px solid blue;
 }
 
-button {
-    color: black;
-}
+
 @media (max-width: 667px) {
-
-    #reset-all-btn {
-        align-items: center;
-        justify-content: center;
-        color: red;
-        background-color: white;
-        border: 3px solid red;
-        margin: 10px;
-        padding: auto;
-        font-size: 20px;
-        width: 40%;
-        height: 5%;
-        font-style: normal;
-        font-weight: 650;
-    }
+    
     .container {
       margin: 3px auto;
       max-width: 85%;
+      display: flex;
+      flex-wrap: wrap;
     }
 
     .container-home, .container-guest {
         height: 80%;
         width: 60%;
-        font-size: 30px;
+        font-size: 40px;
     }
 
     #home-score, #guest-score {
         font-size: 70px;
-        
     }
 
     #home-score-btn-1, #home-score-btn-2, #home-score-btn-3, #guest-score-btn-1, #guest-score-btn-2, #guest-score-btn-3 {
@@ -113,4 +124,10 @@ button {
         font-size: 20px; 
         font-weight: 650;
     }
+    #reset-all-btn {
+        font-style: normal;
+        width: 50%;
+        height: auto;
+    }
+    
 }
